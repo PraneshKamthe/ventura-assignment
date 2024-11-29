@@ -1,13 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Sora";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.sora-font {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin: 0;
+  }
+}
+
+
+.slider-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  overflow: hidden;
+}
+
+.slider-container::before {
+  position: absolute;
+  top: calc(50% - 22px);
+  right: 65px;
+  left: 65px;
+  content: "";
+  background-color: #d8d8d8;
+  height: 1px;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .slider-container::before {
+    top: calc(50% - 22px);
+    right: 60px;
+    left: 60px;
+  }
+}
+
+
+/* this are custom css classes we use at work */
+
+.wi-12 {
+  width: 12px;
+}
+
+.he-12 {
+  height: 12px;
+}
+
+.wi-24 {
+  width: 24px;
+}
+
+.he-24 {
+  height: 24px;
+}
+
+@media (min-width: 768px) {
+  .wi-md-20 {
+    width: 20px;
+  }
+  .he-md-20 {
+    height: 20px;
+  }
+  .wi-md-30 {
+    width: 30px;
+  }
+  .he-md-30 {
+    height: 30px;
+  }
+  .wi-md-100 {
+    width: 100px;
+  }
+}
+
+.wi-70 {
+  width: 70px;
+}
+
+.bg-green-700 {
+  background-color: #00bf79;
+}
+
+.bg-gray-300 {
+  background-color: #bababa;
+}
+
+.bor-rounded-full {
+  border-radius: 50%;
+}
+
+.font-Roboto {
+  font-family: "Roboto";
+}
+
+.fs-10 {
+  font-size: 10px;
+}
+
+.fs-md-12 {
+  font-size: 12px;
 }
